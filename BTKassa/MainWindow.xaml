@@ -1,0 +1,93 @@
+﻿<Window x:Class="BTKassa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTKassa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Margin="0,0,-0.4,-0.2" Source="Background.png" Stretch="Fill"/>
+        <Button x:Name="btnKlanten" Content="Customers" HorizontalAlignment="Left" Margin="637,35,0,0" VerticalAlignment="Top" Width="85" Height="85" BorderBrush="Black" Click="btnKlanten_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF64646B" Offset="1"/>
+                    <GradientStop Color="#FFEA9494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnProducts" Content="Products" HorizontalAlignment="Left" Margin="637,179,0,0" VerticalAlignment="Top" Width="85" Height="85" BorderBrush="Black" Click="btnProducts_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF64646B" Offset="1"/>
+                    <GradientStop Color="#FFEA9494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBestel" Content="Order" HorizontalAlignment="Left" Margin="637,322,0,0" VerticalAlignment="Top" Width="85" Height="85" BorderBrush="Black" Click="btnBestel_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF64646B" Offset="1"/>
+                    <GradientStop Color="#FFEA9494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnPrice" Content="Price History" HorizontalAlignment="Left" Margin="637,462,0,0" VerticalAlignment="Top" Width="85" Height="85" BorderBrush="Black" Click="btnPrice_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF64646B" Offset="1"/>
+                    <GradientStop Color="#FFEA9494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnFactuur" Content="Billing" HorizontalAlignment="Left" Margin="637,599,0,0" VerticalAlignment="Top" Width="85" Height="85" BorderBrush="Black" Click="btnFactuur_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF64646B" Offset="1"/>
+                    <GradientStop Color="#FFEA9494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

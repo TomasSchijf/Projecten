@@ -1,0 +1,41 @@
+﻿<Window x:Class="BTKassa.Bestelling"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTKassa"
+        mc:Ignorable="d"
+        Title="Bestelling" Height="750" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFABA9A9">
+        <DataGrid x:Name="dgBestelling" HorizontalAlignment="Left" Height="701" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding order.customerId}" ClipboardContentBinding="{x:Null}" Header="Customer ID"/>
+                <DataGridTextColumn Binding="{Binding order.customer.firstname}" ClipboardContentBinding="{x:Null}" Header="First Name" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding order.customer.lastname}" ClipboardContentBinding="{x:Null}" Header="Last Name" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding product.name}" ClipboardContentBinding="{x:Null}" Header="Product" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding amount}" ClipboardContentBinding="{x:Null}" Header="Amount"/>
+                <DataGridTextColumn Binding="{Binding order.date}" ClipboardContentBinding="{x:Null}" Header="Date"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Customer" HorizontalAlignment="Left" Margin="515,10,0,0" VerticalAlignment="Top" Height="30" Width="105" Background="White"/>
+        <ComboBox x:Name="cbCustomer" HorizontalAlignment="Left" Margin="625,10,0,0" VerticalAlignment="Top" Width="158" Height="30"/>
+        <Label Content="Product Type" HorizontalAlignment="Left" Margin="515,45,0,0" VerticalAlignment="Top" Height="30" Width="105" Background="White"/>
+        <ComboBox x:Name="cbProductType" HorizontalAlignment="Left" Margin="625,45,0,0" VerticalAlignment="Top" Width="158" Height="30" SelectionChanged="cbProductType_SelectionChanged"/>
+        <Label Content="Product" HorizontalAlignment="Left" Margin="515,80,0,0" VerticalAlignment="Top" Height="30" Width="105" Background="White"/>
+        <ComboBox x:Name="cbProduct" HorizontalAlignment="Left" Margin="625,80,0,0" VerticalAlignment="Top" Width="158" Height="30" DisplayMemberPath="name"/>
+        <TextBox x:Name="txtHoeveelheid" HorizontalAlignment="Left" Height="30" Margin="624,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="515,115,0,0" VerticalAlignment="Top" Height="30" Width="105" Background="White"/>
+        <Button x:Name="btnSaveOrder" Content="Order Opslaan" HorizontalAlignment="Left" Margin="539,231,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="btnSaveOrder_Click"/>
+        <Button x:Name="btnReturn" Content="" HorizontalAlignment="Left" Margin="717,645,0,5.8" Width="70" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="TurnLeft-512.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="246" Margin="510,475,0,-0.2" VerticalAlignment="Top" Width="201" Source="1537723600.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="1537723600.png"/>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="BTKassa.Factuur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTKassa"
+        mc:Ignorable="d"
+        Title="Factuur" Height="750" Width="800" Background="#FFABA9A9" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="btnReturn" Content="" HorizontalAlignment="Left" Margin="717,645,0,5.8" Width="70" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="TurnLeft-512.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="246" Margin="510,475,0,-0.2" VerticalAlignment="Top" Width="201" Source="1537723600.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="1537723600.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <DataGrid x:Name="dgFactuur" HorizontalAlignment="Left" Height="701" Margin="10,10,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="dgFactuur_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding order.customerId}" ClipboardContentBinding="{x:Null}" Header="Customer ID"/>
+                <DataGridTextColumn Binding="{Binding order.customer.firstname}" ClipboardContentBinding="{x:Null}" Header="First Name"/>
+                <DataGridTextColumn Binding="{Binding order.customer.lastname}" ClipboardContentBinding="{x:Null}" Header="Last Name"/>
+                <DataGridTextColumn Binding="{Binding product.name}" ClipboardContentBinding="{x:Null}" Header="Product"/>
+                <DataGridTextColumn Binding="{Binding amount}" ClipboardContentBinding="{x:Null}" Header="Amount"/>
+                <DataGridTextColumn Binding="{Binding product.pricehistory.price}" ClipboardContentBinding="{x:Null}" Header="Price"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Customer" HorizontalAlignment="Left" Margin="516,10,0,0" VerticalAlignment="Top" Height="30" Width="105" Background="White"/>
+        <ComboBox x:Name="cbCustomer" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" Width="158" Height="30" SelectionChanged="cbCustomer_SelectionChanged"/>
+
+    </Grid>
+</Window>
