@@ -1,0 +1,13 @@
+﻿<Window x:Class="Rekenspelv2._0.GoedScherm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rekenspelv2._0"
+        mc:Ignorable="d"
+        Title="GoedScherm" Height="662" Width="444.4" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Margin="0,0,0,-214" Source="Proto Goed.png" Stretch="Fill" Height="634" VerticalAlignment="Top" HorizontalAlignment="Left" Width="445"/>
+        <Button x:Name="btnVolgende" Content="Volgende Vraag" HorizontalAlignment="Left" Height="27" Margin="155,496,0,0" VerticalAlignment="Top" Width="129" Click="btnVolgende_Click"/>
+    </Grid>
+</Window>
